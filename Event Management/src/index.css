@@ -16,19 +16,24 @@ html, body , #root
     height: 100%;
     background-color: antiquewhite;
     display: flex;
-    gap: 12px;
+    flex-wrap: wrap;
+    gap: 16px;
 }
 .card
 {
     background-color: aqua;
-    width: 23%;
-    height: 45%;
+    width: 25%;
+    height: 65%;
     margin: 20px;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     
 }
 .card .upperPart
 {
-    height: 50%;
+    height: 40%;
     width: 100%;
     position: relative;
 }
@@ -44,12 +49,57 @@ html, body , #root
     position: absolute;
     top : 10% ;
     left: 60%;
-    transform: translate(69% , -40%);
+    transform: translate(90% , -40%);
     background-color:white;
     color:black;
     padding: 6px 18px ;
     border-radius: 50rem;
     font-size: 16px;
+}
+.card .middlePart
+{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.card .middlePart h1
+{
+    width: 100%;
+    font-weight: 500;
+    white-space:nowrap ;
+    font-size: 28px;
+    text-align: center;
+    margin: 12px 1px 25px 1px;
+}
+
+.card .middlePart p
+{
+    font-size: 20px;
+    padding-left: 2px ;
+}
+.card .bottomPart
+{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0px 18px;
+    margin: 0px 0px 20px 0px;
+}
+.card .bottomPart p
+{
+    font-size: 20px;
+    color :tomato;
+}
+.card .bottomPart button
+{
+    background-color: blue;
+    padding: 8px 19px;
+    border: none;
+    border-radius: 10px;
 }
 
 
