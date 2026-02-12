@@ -1,12 +1,10 @@
 import React from 'react'
 import Cards from './components/Cards'
+import DashBoard from './components/DashBoard'
 
 const App = () => {
   return (
-    <div>
-      <h1>Hello Manthan</h1>
-      <Cards />
-    </div>
+      <DashBoard />
   )
 }
 
