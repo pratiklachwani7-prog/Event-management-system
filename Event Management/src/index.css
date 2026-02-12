@@ -32,6 +32,7 @@ html, body , #root
     background-color: skyblue;
     border-radius: 12rem;
 }
+
 .sectionBar h3:hover {
     background-color: #0284c7;
     color: white;
@@ -103,13 +104,14 @@ html, body , #root
 
 .card .middlePart h1
 {
-    font-size: 28px;
+    font-size: 21px;
     font-weight: 600;
     text-align: left;
     margin: 0px 0px 10px 0px;
 
     width: 100%;
-    white-space:nowrap ;
+    
+    letter-spacing: 1px;
 }
 
 .card .middlePart p
