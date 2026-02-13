@@ -1,22 +1,25 @@
 import React from 'react'
 import {  Calendar , Clock, MapPin } from 'lucide-react';
-const Cards = () => {
+const Cards = (props) => {
+
+  // console.log(props);   
+
   return (
     <div className='card'>
       <div className="upperPart">
-        <p className="tag">Music</p>
-        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVuHPUc0mj-HJIueb9m1w-Eo4TfDjr2wK2RA&s" alt="" />
+        <p className="tag">{props.tag}</p>
+        <img src={props.url} alt="" />
       </div>
 
       <div className="middlePart">
-        <h1>Summer Music Festival 2026</h1>
-        <p><Calendar size={16.5}/>  Wed , july 15 2026</p>
-        <p><Clock size={16.5} /> 18:00</p>
-        <p><MapPin size={16.5} /> Central Park Arena </p>
+        <h1>{props.title}</h1>
+        <p><Calendar size={16.5}/>  {props.date}</p>
+        <p><Clock size={16.5} /> {props.time}</p>
+        <p><MapPin size={16.5} /> {props.location} </p>
       </div>
 
       <div className='bottomPart'>
-        <p>$69.69</p>
+        <p>${props.price}</p>
         <button>Book Now</button>
       </div>
 
