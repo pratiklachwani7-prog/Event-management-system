@@ -5,14 +5,7 @@ import Login from "./components/Login/Login.jsx"
 import Details from "./components/Details/Details.jsx";
 import Signup from "./components/Signup/Signup.jsx"
 import {Routes,Route} from "react-router-dom"
-const App = () => {
-  return (
-       <Routes>
-            <Route path="/" element={<Login/>}/>
-            <Route path="/details" element={<Details/>}/>
-            <Route path="/signup" element={<Signup/>}/>
-            <Route path="/dashboard" element={<DashBoard/>}/>
-         </Routes>
+
 
 const events = [
   {
@@ -114,11 +107,18 @@ const events = [
 ];
 
 
-
 const App = () => {
   return (
-      <DashBoard events = {events}/>
+       <Routes>
+            <Route path="/" element={<Login/>}/>
+            <Route path="/details" element={<Details/>}/>
+            <Route path="/signup" element={<Signup/>}/>
+            <Route path="/dashboard" element={<DashBoard events={events}/>}/>
+            <Route path="/details/:id" element={<Details />} />
+         </Routes>
+      
   )
 }
+
 
 export default App
