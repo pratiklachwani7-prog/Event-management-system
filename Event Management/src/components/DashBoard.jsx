@@ -2,16 +2,18 @@ import React from 'react'
 import Cards from './Cards'
 import SectionBar from './SectionBar'
 
-const DashBoard = () => {
+const DashBoard = (props) => {
+  //so props.events is the array 
+  // console.log(props.events) ;
   return (
     <>
       <h1>Discover Events</h1>
       <SectionBar />
       <div className="cardContainer">
-        <Cards />
-        <Cards />
-        <Cards />
-        <Cards />
+        {props.events.map((elem,idx)=>
+                    {
+                      return <Cards key={idx} tag={elem.category} title={elem.title} url = {elem.url} date ={elem.date} time={elem.time} location={elem.location} price={elem.price}/>
+                    })}
       </div>
     </>
   )
