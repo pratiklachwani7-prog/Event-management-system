@@ -20,7 +20,7 @@ html, body , #root
 
     width: 100%;
     height: 30px;
-    
+    background-color: #f4f9ff;
     margin: 20px 10px;
 }
 .sectionBar h3
@@ -40,7 +40,7 @@ html, body , #root
 .cardContainer
 {
     width: 100%;
-    background-color: #f6efe5;
+    background-color: #eaf3ff;
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
